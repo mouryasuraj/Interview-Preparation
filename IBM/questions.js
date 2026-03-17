@@ -142,12 +142,20 @@ function findSmallestString (s){
         i++
     }
     
-    if(i===arr.length && ){
+    if(i===arr.length){
         arr[arr.length-1] = "z"
+        return arr.join("")
     }
+
+    while(i<arr.length && arr[i]!=="a"){
+        arr[i] = String.fromCharCode(arr[i].charCodeAt(0) - 1)
+        i++
+    }
+
+    return arr.join("")
 
 }
 
-console.log(findSmallestString("asurajmourya"));
+console.log(findSmallestString("surajmourya"));
 
 // 
